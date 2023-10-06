@@ -1,22 +1,14 @@
-import { StatusBar } from "expo-status-bar";
-import { useState } from "react";
-import Greet from "./components/Greet";
-import {
-  View,
-  Text,
-  Image,
-  Button,
-  Modal,
-  ActivityIndicator,
-  Alert,
-} from "react-native";
-const logoImg = require("./assets/adaptive-icon.png");
-export default function App() {
-  const [isModalVisible, setIsMoadalVisble] = useState(false);
-  return (
-    <View style={{ flex: 1, backgroundColor: "plum", padding: 60 }}>
-      <Greet name='Krushnakant Shinde'/>
-      <Greet name='Bhagavat Shinde'/>
-    </View>
-  );
+import {View,Text,StyleSheet} from 'react-native'
+
+export default function App(){
+    return(
+        <View style={style.container}>
+            <Text style={style.title}>StyleSheet API</Text>
+        </View>
+    )
 }
+
+const style=StyleSheet.create({
+    container:{flex:1,backgroundColor:"red",padding:60},
+    title:{color:"yellow"} 
+})
